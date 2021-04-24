@@ -1,0 +1,436 @@
+@font-face
+  font-family: "Rubik"
+  src : url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap")
+
+$active: #F53838
+$activeColor: #fff
+$boxShadow: 0px 8px 10px rgba(245, 56, 56, 0.35)
+$bgGray: #F8F8F8
+*
+  margin: 0
+  padding: 0
+body
+  font-family: 'Rubik', sans-serif
+h1
+  font-weight: 500
+  font-size: 50px
+  line-height: 70px
+  color: #0B132A
+h2
+  color: #0B132A
+  font-weight: 500
+  font-size: 35px
+  line-height: 50px
+  margin-bottom: 20px
+h3
+  font-size: 18px
+  font-weight: 500
+  line-height: 45px
+  color: #0B132A
+p
+  color: #4F5665
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 30px
+.nowrap
+  display: flex
+  flex-wrap: nowrap
+.column50
+  display: flex
+  flex-direction: column
+  flex: 1
+.main
+  margin-left: 150px
+  margin-right: 150px
+
+a
+  text-decoration: none
+  cursor: pointer
+  color: black
+
+button
+  text-decoration: none
+  cursor: pointer
+.btn
+  border: 2px solid $active
+  box-sizing: border-box
+  border-radius: 50px
+  color: $active
+  background: white
+  transition: all 0.6s
+  text-decoration: none
+  width: 50%
+  &:hover
+    @extend .btn__active
+  &__active
+    background-color: $active
+    box-shadow: $boxShadow
+    text-decoration: none
+    color: white
+
+header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-top: 50px
+
+.logo
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 20px
+  font-weight: 500
+  &__img
+    margin-right: 10px
+
+.nav
+  &__ul
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    display: flex
+    align-items: center
+  &__li
+    list-style-type: none
+  &__li:not(:first-child)
+    margin-left: 40px
+  &__a
+    color: #4F5665
+    text-decoration: none
+    transition: color 0.6s
+  &__a:hover
+    color: black
+
+.autorization
+  font-style: normal
+  font-weight: 500
+  font-size: 16px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  &__signIn
+    color: #0B132A
+  &__signUp
+    color: $active
+    border: 1px solid $active
+    box-sizing: border-box
+    border-radius: 50px
+    padding: 13px 45px
+    margin-left: 30px
+
+.fisrtSlide
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-top: 100px
+  &__left
+    display: flex
+    flex-direction: column
+    flex: 1
+    padding: 10px
+    &_h2
+      margin-top: 20px
+    &_p
+      margin-top: 20px
+      line-height: 30px
+      color: #4F5665
+    &_btn
+      margin-top: 50px
+      border-radius: 10px
+      color: white
+      padding: 17px 60px
+  &__right
+    display: flex
+    flex-direction: column
+    flex: 1
+    padding: 10px
+    &_img
+      width: 100%
+
+.stats
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 100px
+  box-shadow: 0px 50px 50px rgba(13, 16, 37, 0.06,)
+  padding: 60px
+  &__block
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 33%
+    &:not(:first-child)
+      border-left: 2px solid #EEEFF2
+  &__icon
+    border-radius: 50px
+    background-color: #FFECEC
+    color: #F53838
+    width: 60px
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 20px
+  &__informations
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-left: 36px
+    &_num
+      font-style: normal
+      font-weight: bold
+      font-size: 25px
+      color: #0B132A
+    &_label
+      font-style: normal
+      font-weight: normal
+      font-size: 20px
+      color: #4F5665
+      margin-top: 5px
+
+.provide
+
+  padding: 120px 0
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  &__left
+    max-width: 360px
+  &__img
+    width: 100%
+  &__right
+    max-width: 360px
+  &__h2
+    
+  &__p
+    line-height: 30px
+    margin-top: 20px
+  &__ul
+    margin-top: 20px
+  &__li
+    color: #4F5665
+    list-style-type: none
+  &__li:not(:first-child)
+    margin-top: 15px
+  &__li::before
+    content: ' ✓ '
+    width: 20px
+    height: 20px
+    background-color: #2FAB73
+    border-radius: 20px
+    color: white
+    margin-right: 10px
+
+.chooseYourPlan
+  padding-top: 80px
+  padding-bottom: 180px
+  background: $bgGray
+  text-align: center
+  &__list
+    display: flex
+    align-items: start
+    justify-content: space-between
+    align-items: stretch
+    margin-top: 60px
+  &__item
+    background: #FFFFFF
+    border: 2px solid #DDDDDD
+    box-sizing: border-box
+    border-radius: 10px
+    width: 33%
+    padding: 50px 10px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    transition: border 0.6s
+  &__item:hover
+    border: 2px solid #F53838
+  &__label
+    font-weight: 500
+    font-size: 18px
+    line-height: 30px
+    color: #0B132A
+    margin-top: 30px
+  &__ul
+    font-size: 14px
+    color: #4F5665
+    margin-top: 30px
+    list-style-type: none
+    text-align: left
+    margin-left: 0
+    padding-left: 0
+  &__li
+    line-height: 30px
+    list-style-image: url(../img/check.png)
+  &__fee
+    margin-top: 50px
+  &__btn
+    margin-top: 20px
+    padding: 17px 60px
+    display: flex
+    align-items: center
+    justify-content: center
+
+.map
+  margin-top: 150px
+  &__blockMap
+    position: relative
+  &__map
+    width: 100%
+    margin-top: 150px
+  &__brands
+    display: flex
+    align-items: center
+    justify-content: space-around
+    margin-top: 80px
+
+.messages
+  text-align: center
+  margin-top: 120px
+  padding-bottom: 150px
+  &__slider
+    margin-top: 60px
+    margin-left: 150px
+    &_viewBox
+      overflow: hidden
+    &_items
+      display: flex
+      align-items: stretch
+      justify-content: flex-start
+    &_item
+      background: #FFFFFF
+      border: 2px solid #DDDDDD
+      box-sizing: border-box
+      border-radius: 10px
+      min-width: 400px
+      padding: 30px
+      transition: border 0.6s
+      &:hover
+        border: 2px solid #F53838
+    &_item:not(:first-child)
+      margin-left: 50px
+    &_headerLeft
+      display: flex
+      align-items: center
+    &_header
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &_info
+      margin-left: 20px
+      text-align: left
+    &_p
+      text-align: left
+      font-size: 16px
+      line-height: 30px
+      color: #0B132A
+      margin-top: 20px
+    &_star
+      color: #FEA250
+    &_name
+      font-weight: 500
+      font-size: 18px
+      line-height: 30px
+      color: #0B132A
+    &_location
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 30px
+      color: #4F5665
+    &_nav
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-top: 60px
+    &_navLeft
+      display: flex
+    &_navRight
+      font-size: 20px
+    &_pagination
+      width: 15px
+      height: 15px
+      background: #DDE0E4
+      border-radius: 15px
+      cursor: pointer
+    &_pagination:not(:first-child)
+        margin-left: 15px
+    &_pagActive
+      background-color: $active
+    &_btn
+      width: 60px
+      height: 60px
+      border: 2px solid $active
+      box-sizing: border-box
+    
+.subscribe
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 60px
+  box-shadow: 0px 13px 18px rgb(17,19,35, 0.1)
+  position: relative
+  top: -90px
+  background-color: white
+  &__btn
+    padding: 17px 60px
+    border-radius: 10px
+    max-width: 250px
+
+footer
+  padding-bottom: 100px
+  background-color: $bgGray
+  position: relative
+.footer
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__left
+    display: flex
+    flex-direction: column
+    align-items: start
+    flex: 1
+    &_p
+      margin-top: 25px
+      line-height: 30px
+    &_subscribes
+      margin-top: 30px
+      display: flex
+    &_subscribe
+      background-color: white
+      width: 30px
+      height: 30px
+      color: $active
+      border-radius: 30px
+      display: flex
+      align-items: center
+      justify-content: center
+      box-shadow: 0px 13px 18px rgba(17, 19, 35, 0.08)
+      &:not(:first-child)
+        margin-left: 20px
+    &_signature
+      font-size: 16px
+      line-height: 30px
+      color: #AFB5C0
+      margin-top: 30px
+  &__right
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+    flex: 1
+    &_group
+      display: flex
+      justify-content: space-between
+      & div:not(:first-child)
+        margin-left: 120px
+  &__ul
+    margin-top: 20px
+    padding: 0
+  &__li
+    list-style-type: none
+    &_a
+      font-size: 16px
+      line-height: 30px
+      color: #4F5665
