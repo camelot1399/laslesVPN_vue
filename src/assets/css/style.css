@@ -353,10 +353,11 @@ header {
 }
 .messages__slider {
   margin-top: 60px;
-  margin-left: 150px;
+  overflow: hidden;
 }
 .messages__slider_viewBox {
-  overflow: hidden;
+  position: relative;
+  transition: all 0.6s;
 }
 .messages__slider_items {
   display: flex;

@@ -10,7 +10,6 @@
 import {slider} from '@/components/messages/js/messages__slider.js'
 export default {
     name: 'messages',
-    methods: {},
     mounted() {
         slider('.messages__slider');
     }

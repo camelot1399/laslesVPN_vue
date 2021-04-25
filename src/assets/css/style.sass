@@ -292,9 +292,11 @@ header
   padding-bottom: 150px
   &__slider
     margin-top: 60px
-    margin-left: 150px
+    // margin-left: 150px
+    overflow: hidden
     &_viewBox
-      overflow: hidden
+      position: relative
+      transition: all 0.6s
     &_items
       display: flex
       align-items: stretch
